@@ -2,129 +2,22 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Сейлор Мун - Воительница в матроске</title>
-    <style>
-        body {
-            background: linear-gradient(135deg, #2c1645 0%, #6b5b95 100%);
-            color: #fff;
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 20px;
-            text-align: center;
-        }
-        
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            background: rgba(0, 0, 0, 0.6);
-            padding: 30px;
-            border-radius: 20px;
-            border: 3px solid #ffeb3b;
-            box-shadow: 0 0 30px rgba(255, 235, 59, 0.3);
-        }
-        
-        h1 {
-            color: #ffeb3b;
-            text-shadow: 0 0 15px #ff9800;
-            font-size: 3em;
-            margin-bottom: 20px;
-        }
-        
-        .moon-princess {
-            font-size: 1.8em;
-            color: #e91e63;
-            margin: 20px 0;
-            text-shadow: 0 0 10px #ff4081;
-        }
-        
-        .sailor-img {
-            width: 300px;
-            height: 400px;
-            margin: 20px auto;
-            background: linear-gradient(45deg, #ff4081, #7c4dff, #00bcd4, #ffeb3b);
-            border-radius: 20px;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .sailor-img::before {
-            content: "🌙";
-            font-size: 100px;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-        
-        .description {
-            font-size: 1.2em;
-            line-height: 1.6;
-            margin: 20px 0;
-            text-align: left;
-        }
-        
-        .quote {
-            font-style: italic;
-            color: #00bcd4;
-            border-left: 3px solid #ff4081;
-            padding-left: 20px;
-            margin: 30px 0;
-            text-align: left;
-        }
-        
-        .sailors-list {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 15px;
-            margin: 30px 0;
-        }
-        
-        .sailor {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 15px;
-            border-radius: 15px;
-            min-width: 120px;
-            border: 2px solid;
-            transition: transform 0.3s ease;
-        }
-        
-        .sailor:hover {
-            transform: scale(1.05);
-        }
-        
-        .moon { border-color: #ffeb3b; color: #ffeb3b; }
-        .mercury { border-color: #00bcd4; color: #00bcd4; }
-        .mars { border-color: #ff4081; color: #ff4081; }
-        .jupiter { border-color: #4caf50; color: #4caf50; }
-        .venus { border-color: #ff9800; color: #ff9800; }
-        
-        .transformation {
-            background: rgba(255, 235, 59, 0.2);
-            padding: 20px;
-            border-radius: 15px;
-            margin: 30px 0;
-            border: 2px dashed #ff4081;
-        }
-        
-        footer {
-            margin-top: 40px;
-            color: #7c4dff;
-            font-size: 0.9em;
-        }
-    </style>
+    <link rel="stylesheet" href="first.css">
 </head>
 <body>
     <div class="container">
-        <h1>✨ Сейлор Мун ✨</h1>
-        
-        <div class="moon-princess">Принцесса Серенити</div>
+        <header>
+            <h1>✨ Сейлор Мун ✨</h1>
+            <div class="moon-princess">Принцесса Серенити</div>
+        </header>
         
         <div class="sailor-img"></div>
         
         <div class="description">
             <p>Сейлор Мун (яп. 美少女戦士セーラームーン) — главная героиня знаменитой манги и аниме-сериала, созданной Наоко Такэути.</p>
-            <p>Обычная школьница Усаги Цукино discovers, что она — воин в матроске, предназначенная защищать Землю от сил зла.</p>
+            <p>Обычная школьница Усаги Цукино обнаруживает, что она — воин в матроске, предназначенная защищать Землю от сил зла.</p>
         </div>
         
         <div class="quote">
@@ -134,11 +27,11 @@
         <h2>🌙 Команда Сейлор Воинов 🌙</h2>
         
         <div class="sailors-list">
-            <div class="sailor moon">Сейлор Мун<br>Луна</div>
-            <div class="sailor mercury">Сейлор Меркурий<br>Вода</div>
-            <div class="sailor mars">Сейлор Марс<br>Огонь</div>
-            <div class="sailor jupiter">Сейлор Юпитер<br>Гром</div>
-            <div class="sailor venus">Сейлор Венера<br>Любовь</div>
+            <a href="second.html" class="sailor moon">Сейлор Мун<br>Луна</a>
+            <a href="second.html" class="sailor mercury">Сейлор Меркурий<br>Вода</a>
+            <a href="second.html" class="sailor mars">Сейлор Марс<br>Огонь</a>
+            <a href="second.html" class="sailor jupiter">Сейлор Юпитер<br>Гром</a>
+            <a href="second.html" class="sailor venus">Сейлор Венера<br>Любовь</a>
         </div>
         
         <div class="transformation">
@@ -150,8 +43,24 @@
             <p>Сериал рассказывает о дружбе, любви, верности и борьбе добра со злом. Главная героиня проходит путь от неуклюжей девочки до сильной и ответственной воительницы.</p>
         </div>
         
+        <div class="crystal-gallery">
+            <h3>💎 Кристальные артефакты 💎</h3>
+            <div class="crystals">
+                <div class="crystal silver">Серебряный кристалл</div>
+                <div class="crystal pink">Розовый кристалл</div>
+                <div class="rystal blue">Голубой кристалл</div>
+            </div>
+        </div>
+        
         <footer>
-            © 2024 | Во имя Луны! 🌙
+            <p>© 2024 | Во имя Луны! 🌙</p>
+            <div class="moon-phase">
+                <div class="moon-phase-icon">🌑</div>
+                <div class="moon-phase-icon">🌒</div>
+                <div class="moon-phase-icon">🌓</div>
+                <div class="moon-phase-icon">🌔</div>
+                <div class="moon-phase-icon">🌕</div>
+            </div>
         </footer>
     </div>
 </body>

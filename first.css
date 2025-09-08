@@ -1,0 +1,321 @@
+/* Основные стили */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(135deg, #2c1645 0%, #6b5b95 100%);
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Добавляем звёздный фон */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 3px),
+        radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 2px),
+        radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 3px);
+    background-size: 550px 550px, 350px 350px, 250px 250px;
+    background-position: 0 0, 40px 60px, 130px 270px;
+    z-index: -1;
+    opacity: 0.7;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 30px;
+    border-radius: 20px;
+    border: 3px solid #ffeb3b;
+    box-shadow: 0 0 30px rgba(255, 235, 59, 0.3);
+    backdrop-filter: blur(5px);
+    position: relative;
+    z-index: 1;
+}
+
+/* Анимация мерцания для контейнера */
+@keyframes glow {
+    0% { box-shadow: 0 0 20px rgba(255, 235, 59, 0.3); }
+    50% { box-shadow: 0 0 30px rgba(255, 235, 59, 0.6); }
+    100% { box-shadow: 0 0 20px rgba(255, 235, 59, 0.3); }
+}
+
+.container {
+    animation: glow 3s infinite ease-in-out;
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: #ffeb3b;
+    text-shadow: 0 0 15px #ff9800;
+    font-size: 3em;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+.moon-princess {
+    font-size: 1.8em;
+    color: #e91e63;
+    margin: 20px 0;
+    text-shadow: 0 0 10px #ff4081;
+    font-weight: bold;
+}
+
+.sailor-img {
+    width: 300px;
+    height: 400px;
+    margin: 20px auto;
+    border-radius: 20px;
+    background-image: url('https://i.pinimg.com/736x/44/fd/75/44fd7592c20b85b14fbc2636f08f6444.jpg');
+    background-size: cover;
+    background-position: center;
+    border: 3px solid #ffeb3b;
+    box-shadow: 0 0 20px rgba(255, 235, 59, 0.5);
+    transition: transform 0.5s ease;
+}
+
+.sailor-img:hover {
+    transform: scale(1.02);
+}
+
+.description {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin: 20px 0;
+    text-align: left;
+}
+
+.quote {
+    font-style: italic;
+    color: #00bcd4;
+    border-left: 3px solid #ff4081;
+    padding-left: 20px;
+    margin: 30px 0;
+    text-align: left;
+    position: relative;
+}
+
+.quote::after {
+    content: '"';
+    font-size: 3em;
+    color: rgba(255, 64, 129, 0.2);
+    position: absolute;
+    bottom: -20px;
+    right: 10px;
+}
+
+h2 {
+    color: #ffeb3b;
+    margin: 30px 0 20px;
+    text-shadow: 0 0 5px rgba(255, 235, 59, 0.5);
+    font-size: 2em;
+}
+
+.sailors-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 30px 0;
+}
+
+.sailor {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 15px;
+    min-width: 120px;
+    border: 2px solid;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+    display: block;
+}
+
+.sailor:hover {
+    transform: scale(1.05);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.sailor:active {
+    transform: scale(0.95);
+}
+
+.moon { border-color: #ffeb3b; color: #ffeb3b; }
+.mercury { border-color: #00bcd4; color: #00bcd4; }
+.mars { border-color: #ff4081; color: #ff4081; }
+.jupiter { border-color: #4caf50; color: #4caf50; }
+.venus { border-color: #ff9800; color: #ff9800; }
+
+.transformation {
+    background: rgba(255, 235, 59, 0.2);
+    padding: 20px;
+    border-radius: 15px;
+    margin: 30px 0;
+    border: 2px dashed #ff4081;
+    position: relative;
+    overflow: hidden;
+}
+
+.transformation::before {
+    content: '✨';
+    position: absolute;
+    font-size: 2em;
+    opacity: 0.3;
+    top: 10px;
+    left: 10px;
+    animation: float 5s infinite ease-in-out;
+}
+
+.transformation::after {
+    content: '✨';
+    position: absolute;
+    font-size: 2em;
+    opacity: 0.3;
+    bottom: 10px;
+    right: 10px;
+    animation: float 5s infinite ease-in-out reverse;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-10px) rotate(10deg); }
+}
+
+/* Новые стили - Галерея кристаллов */
+.crystal-gallery {
+    margin: 40px 0;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+}
+
+.crystal-gallery h3 {
+    margin-bottom: 20px;
+    color: #7c4dff;
+}
+
+.crystals {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.crystal {
+    padding: 15px 25px;
+    border-radius: 50px;
+    font-weight: bold;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.crystal:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
+}
+
+.silver { background: linear-gradient(to right, #c0c0c0, #e0e0e0); color: #333; }
+.pink { background: linear-gradient(to right, #ffb6c1, #ffc0cb); color: #333; }
+.blue { background: linear-gradient(to right, #add8e6, #87ceeb); color: #333; }
+
+/* Новые стили - Фазы луны в футере */
+.moon-phase {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.moon-phase-icon {
+    font-size: 1.5em;
+    animation: spin 4s infinite linear;
+    opacity: 0.7;
+}
+
+.moon-phase-icon:nth-child(2) { animation-delay: 0.5s; }
+.moon-phase-icon:nth-child(3) { animation-delay: 1s; }
+.moon-phase-icon:nth-child(4) { animation-delay: 1.5s; }
+.moon-phase-icon:nth-child(5) { animation-delay: 2s; }
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+footer {
+    margin-top: 40px;
+    color: #7c4dff;
+    font-size: 0.9em;
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+        margin: 10px;
+    }
+    
+    h1 {
+        font-size: 2em;
+    }
+    
+    .sailor-img {
+        width: 250px;
+        height: 330px;
+    }
+    
+    .sailors-list {
+        gap: 10px;
+    }
+    
+    .sailor {
+        min-width: 100px;
+        padding: 10px;
+        font-size: 0.9em;
+    }
+    
+    .crystals {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Анимация появления элементов */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.container > * {
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+.container > *:nth-child(1) { animation-delay: 0.1s; }
+.container > *:nth-child(2) { animation-delay: 0.2s; }
+.container > *:nth-child(3) { animation-delay: 0.3s; }
+.container > *:nth-child(4) { animation-delay: 0.4s; }
+.container > *:nth-child(5) { animation-delay: 0.5s; }
+.container > *:nth-child(6) { animation-delay: 0.6s; }
+.container > *:nth-child(7) { animation-delay: 0.7s; }
+.container > *:nth-child(8) { animation-delay: 0.8s; }
+.container > *:nth-child(9) { animation-delay: 0.9s; }
+.container > *:nth-child(10) { animation-delay: 1.0s; }
