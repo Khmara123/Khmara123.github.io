@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Grid Demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
+        .demo-box {
+            min-height: 100px;
+            padding: 15px;
+            margin-bottom: 10px;
+        }
+        .code-example {
+            background-color: #f8f9fa;
+            padding: 10px;
+            border-radius: 5px;
+            font-family: monospace;
+            margin-bottom: 20px;
+        }
+        h2 {
+            margin-top: 30px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center mb-4">Демонстрация Bootstrap Grid System</h1>
+        
+        <div class="code-example">
+            &lt;div class="container"&gt;<br>
+            &nbsp;&nbsp;&lt;div class="row"&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="col"&gt;...&lt;/div&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="border col"&gt;...&lt;/div&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="bg-success col"&gt;...&lt;/div&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="border col-3"&gt;...&lt;/div&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="bg-success col-9"&gt;...&lt;/div&gt;<br>
+            &nbsp;&nbsp;&lt;/div&gt;<br>
+            &lt;/div&gt;
+        </div>
+
+        <h2>Результат:</h2>
+        
+        <div class="container border p-3 mb-4">
+            <div class="row">
+                <!-- Простая колонка -->
+                <div class="col demo-box">
+                    <strong>class="col"</strong><br>
+                    Автоматическая ширина (равномерное распределение)
+                </div>
+                
+                <!-- Колонка с border -->
+                <div class="border col demo-box">
+                    <strong>class="border col"</strong><br>
+                    Колонка с рамкой
+                </div>
+                
+                <!-- Колонка с фоном -->
+                <div class="bg-success col demo-box text-white">
+                    <strong>class="bg-success col"</strong><br>
+                    Колонка с зеленым фоном
+                </div>
+            </div>
+            
+            <div class="row mt-4">
+                <!-- Фиксированная ширина 3/12 -->
+                <div class="border col-3 demo-box">
+                    <strong>class="border col-3"</strong><br>
+                    Ширина: 3 колонки из 12
+                </div>
+                
+                <!-- Фиксированная ширина 9/12 -->
+                <div class="bg-success col-9 demo-box text-white">
+                    <strong>class="bg-success col-9"</strong><br>
+                    Ширина: 9 колонок из 12
+                </div>
+            </div>
+        </div>
+
+        <h2>Объяснение классов:</h2>
+        <ul class="list-group">
+            <li class="list-group-item">
+                <strong>.container</strong> - центрирующий контейнер с отступами
+            </li>
+            <li class="list-group-item">
+                <strong>.row</strong> - строка для размещения колонок
+            </li>
+            <li class="list-group-item">
+                <strong>.col</strong> - автоматическая колонка (равномерное распределение)
+            </li>
+            <li class="list-group-item">
+                <strong>.col-3 / .col-9</strong> - колонки с фиксированной шириной (3/12 и 9/12)
+            </li>
+            <li class="list-group-item">
+                <strong>.border</strong> - добавляет рамку вокруг элемента
+            </li>
+            <li class="list-group-item">
+                <strong>.bg-success</strong> - устанавливает зеленый фон
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
